@@ -1,14 +1,18 @@
 module.exports = { 
   entry: "./app/components/Main.js", 
   output: { 
-    filename: "public/bundle.js"
+    filename: "./public/bundle.js"
   }, 
   module: { 
     loaders: [ 
       { 
-        test: /\.jsx?$/,
+        test: /\.js?$/,
         exclude: /(node_modules|bower_components)/, 
-        loader: 'babel'
+        loader: 'babel-loader', 
+        query: { 
+          presets: 'react'
+        }
+
       }
     ]
   }

@@ -1,4 +1,5 @@
 var React = require('react'); 
+var ReactDOM = require('react-dom'); 
 
 
 var Main = React.createClass({ 
@@ -11,4 +12,4 @@ var Main = React.createClass({
   }
 }); 
 
-React.render(<Main />, document.getElementById('app'));
+module.exports = Main; 
